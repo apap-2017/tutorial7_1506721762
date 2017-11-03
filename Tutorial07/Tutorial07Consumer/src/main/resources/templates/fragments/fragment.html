@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="headfragment">
+<title th:text="${title}"></title>
+    	<link rel="stylesheet" type="text/css" th:href="@{http://cdn.datatables.net/1.10.16/css/jquery.dataTables.css}"></link>
+		<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js}"></script>
+		<script type="text/javascript" charset="utf8" th:src="@{http://cdn.datatables.net/1.10.16/js/jquery.dataTables.js}">
+		</script>		
+		<script>
+		$(document).ready( function () {
+		    $('#table').DataTable();
+		} );
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div th:fragment="header">
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/student/viewall">Daftar Mahasiswa</a></li>
+<li><a href="/student/add">Menambah Mahasiswa</a></li>
+</ul>
+</div>
+<div th:fragment="footer">
+<hr/>
+<h4>Mata Kuliah APAP</h4>
+</div>
+</body>
+</html>
