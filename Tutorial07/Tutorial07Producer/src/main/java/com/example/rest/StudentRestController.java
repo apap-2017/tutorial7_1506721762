@@ -16,8 +16,8 @@ import com.example.service.StudentService;
 public class StudentRestController {
 	@Autowired
 	StudentService studentService;
-	@RequestMapping("/student/view/{npm}")
 	
+	@RequestMapping("/student/view/{npm}")	
 	public StudentModel view (@PathVariable(value = "npm") String npm) {
 		StudentModel student = studentService.selectStudent (npm);
 		return student;

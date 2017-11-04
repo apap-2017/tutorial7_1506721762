@@ -12,7 +12,7 @@ import com.example.dao.StudentDAO;
 import com.example.model.CourseModel;
 import com.example.model.StudentModel;
 
-import groovy.util.logging.Slf4j;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
@@ -24,7 +24,7 @@ public class StudentServiceRest implements StudentService {
 	@Override
 	public StudentModel selectStudent(String npm) {
 		// TODO Auto-generated method stub
-		
+		log.info("select in service rest");
 		return studentDAO.selectStudent(npm);
 	}
 

@@ -18,7 +18,6 @@ import com.example.service.StudentService;
 public class CourseRestController {
 	@Autowired
 	CourseService courseService;
-
 	
     @RequestMapping("/course/view/{id_course}")
     public CourseModel viewCourse(@PathVariable(value = "id_course") String id_course) {

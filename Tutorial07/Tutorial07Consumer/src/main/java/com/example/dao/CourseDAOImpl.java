@@ -18,6 +18,7 @@ public class CourseDAOImpl implements CourseDAO {
 	@Override
 	public CourseModel selectCourse(String id_course) {
 		// TODO Auto-generated method stub
+		log.info("Tes");
 		log.info(id_course + ": id course");
 		CourseModel course = restTemplate.getForObject("http://localhost:8080/rest/course/view/" + id_course, CourseModel.class);
 		return course;

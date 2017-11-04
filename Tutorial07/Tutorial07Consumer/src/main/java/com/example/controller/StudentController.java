@@ -81,6 +81,7 @@ public class StudentController
         StudentModel student = studentDAO.selectStudent (npm);
 
         if (student != null) {
+        	log.info("controller consumer");
             model.addAttribute ("student", student);
             model.addAttribute("title", "View Student");
             return "view";
